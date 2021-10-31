@@ -1,0 +1,52 @@
+
+.title {
+    padding-left: 10px;
+    font-size: 20px;
+}
+.title-link {
+	padding-left: 5px;
+}
+.app-sidenav {
+	width: 75%;
+}
+.toolbar-filler {
+	+ {
+		.mat-icon-button.sidenav-toggle-button {
+			position: absolute;
+			right: 24px;
+		}
+	}
+}
+.mat-icon-button {
+	outline: none;
+}
+.component-title {
+	font-size: 22px;
+	color: #464646;
+	font-weight: bold;
+	position: absolute;
+    left: 50%;
+	-webkit-transform: translateX(-50%);
+	transform: translateX(-50%);
+}
+#toolBar{
+    position:fixed;
+    z-index: 9999;
+    height: 8%;
+    border-bottom: 1px solid #EFEFEF;
+    background-color: aliceblue;
+}
+#menuToolBar{
+    height: 18%;
+    background-color: aliceblue;
+}
+.feature-content{
+    height: 92%;
+    position: fixed;
+    top: 8%;
+    width: 100%;
+}
+
+.menu-active{
+  background-color: #dcdede;
+}

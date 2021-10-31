@@ -1,0 +1,3 @@
+<div class="add-feature-container" *ngFor="let addFeat of addFeatures">
+    <button mat-raised-button color="primary" (click)="triggerFeature(addFeat.id)">{{addFeat.name}}</button>
+</div>

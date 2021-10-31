@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkgurusankar_angular=self.webpackChunkgurusankar_angular||[]).push([[790],{790:(t,e,a)=>{a.r(e),a.d(e,{FeaturesModule:()=>s});var r=a(583),n=a(716);let s=(()=>{class u{}return u.\u0275fac=function(o){return new(o||u)},u.\u0275mod=n.oAB({type:u}),u.\u0275inj=n.cJS({imports:[[r.ez]]}),u})()}}]);
