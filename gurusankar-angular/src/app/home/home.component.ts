@@ -1,7 +1,9 @@
 import { NewAdditionsComponent } from './../shared/new-additions/new-additions.component';
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
-import * as _ from 'lodash'; 
+import * as _ from 'lodash';
+import { AngularFireStore } from '@angular/fire/store';
+
 
 interface AddFeatures {
   title: string;
@@ -33,11 +35,13 @@ export class HomeComponent implements OnInit {
   }
 
   constructor(
-    public dialog: MatDialog
+    public dialog: MatDialog,
+    private db: AngularFireStore
   ) { }
 
   ngOnInit(): void {
     this.initializeData();
+    console.log(this.db.doc('pages'))
   }
 
   initializeData = () => {
@@ -59,7 +63,7 @@ export class HomeComponent implements OnInit {
 
   triggerFeature = (id: number) => {
     let dialogData = this.createDialogData(id);
-    const dialogRef = this.dialog.open(NewAdditionsComponent, {width: '300px', data: dialogData});
+    const dialogRef = this.dialog.open(NewAdditionsComponent, {width: '300px', data: dialogData, disableClose: true});
     dialogRef.afterClosed().subscribe(result => {
       console.log(result);
     });
